@@ -1,3 +1,5 @@
+datasets/NASA_access_log_Jul95
+datasets/NASA_access_log_Aug95
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
