@@ -91,7 +91,6 @@ class HoltWintersUncertainty(BasePredictorModel):
             'std': std,
             'lower_bound': lower,
             'upper_bound': upper,
-            'method': 'prediction_interval',
             'confidence_level': 0.95
         }
 
