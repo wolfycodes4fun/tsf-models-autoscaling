@@ -71,6 +71,24 @@ def handle_missing_values(df):
     result['number_of_requests'] = result['number_of_requests'].fillna(0).astype(int)
     
     return result
+
+def remove_downtime_periods(df):
+    """
+    Removes known downtime periods from the dataset
+    from 01/Aug/1995:14:52:01 until 03/Aug/1995:04:36:13
+    """
+    hurricane_start = pd.Timestamp('1995-08-01 14:52:00')
+    hurricane_end = pd.Timestamp('1995-08-03 04:37:00')
+    
+    print(f"Removing downtime period: {hurricane_start} to {hurricane_end}")
+    
+    mask = ~((df['time'] >= hurricane_start) & (df['time'] <= hurricane_end))
+    filtered_df = df[mask].reset_index(drop=True)
+    
+    removed_count = len(df) - len(filtered_df)
+    print(f"  Removed {removed_count:,} minutes of downtime data\n")
+    
+    return filtered_df
     
 
 if __name__ == "__main__":
@@ -106,6 +124,9 @@ if __name__ == "__main__":
     print("Filling in missing minutes with zero requests...")
     complete_data = handle_missing_values(requests_per_minute)
     print(f"  Total minutes in time range: {len(complete_data):,} \n")
+    
+    # Remove downtime periods
+    complete_data = remove_downtime_periods(complete_data)
     
     # Save to CSV
     print(f"Saving to {OUTPUT_FILE}...")
