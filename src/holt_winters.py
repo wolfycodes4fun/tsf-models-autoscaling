@@ -16,7 +16,6 @@ class HoltWintersUncertainty(BasePredictorModel):
         alpha: Optional[float] = None,
         beta: Optional[float] = None,
         gamma: Optional[float] = None,
-        uncertainty_method: str = 'prediction_interval'
     ):
         self.seasonal_periods = seasonal_periods
         self.trend = trend
@@ -24,7 +23,6 @@ class HoltWintersUncertainty(BasePredictorModel):
         self.alpha = alpha
         self.beta = beta
         self.gamma = gamma
-        self.uncertainty_method = uncertainty_method
 
         self.model = None
         self.fitted_model = None
@@ -96,18 +94,8 @@ class HoltWintersUncertainty(BasePredictorModel):
 
 def create_holt_winters_model(
     seasonal_periods: int = 60,
-    uncertainty_method: str = 'prediction_interval'
 ) -> HoltWintersUncertainty:
-    """
-    Factory function to create Holt-Winters model with sensible defaults
-    
-    Args:
-        seasonal_periods: Length of seasonal cycle
-        uncertainty_method: Uncertainty quantification method
-    
-    Returns:
-        Configured HoltWintersUncertainty instance
-    """
+
     return HoltWintersUncertainty(
         seasonal_periods=seasonal_periods,
         trend='add',
