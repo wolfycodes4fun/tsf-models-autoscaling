@@ -78,7 +78,7 @@ def remove_downtime_periods(df):
     from 01/Aug/1995:14:52:01 until 03/Aug/1995:04:36:13
     """
     hurricane_start = pd.Timestamp('1995-08-01 14:52:00')
-    hurricane_end = pd.Timestamp('1995-08-03 04:37:00')
+    hurricane_end = pd.Timestamp('1995-08-03 04:36:00')
     
     print(f"Removing downtime period: {hurricane_start} to {hurricane_end}")
     
