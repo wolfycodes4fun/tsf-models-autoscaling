@@ -9,7 +9,6 @@ and create a csv file reflecting the number of requests per minute
 """
 
 import pandas as pd
-import numpy as np
 import re
 import os
 from datetime import datetime
