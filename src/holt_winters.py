@@ -17,6 +17,7 @@ class HoltWintersUncertainty(BasePredictorModel):
         beta: Optional[float] = None,
         gamma: Optional[float] = None,
     ):
+        # Define instance variables
         self.seasonal_periods = seasonal_periods
         self.trend = trend
         self.seasonal = seasonal
@@ -28,7 +29,7 @@ class HoltWintersUncertainty(BasePredictorModel):
         self.fitted_model = None
         self.data = None
     
-    def fit(self, data: List[float], timestamps: Optional[List[Any]] = None):
+    def fit(self, data: List[float], timestamps: Optional[List[Any]] = None): 
         self.data = np.array(data)
 
         # Validate if enough data is present for two seasonal periods
@@ -37,6 +38,7 @@ class HoltWintersUncertainty(BasePredictorModel):
             raise ValueError(f"Holt-Winters model requires at least {required_data_points} for two seasonal periods but only got {len(self.data)}")
         
         try:
+            # Create model
             self.model = ExponentialSmoothing(
                 self.data,
                 seasonal_periods=self.seasonal_periods,
@@ -44,7 +46,8 @@ class HoltWintersUncertainty(BasePredictorModel):
                 seasonal=self.seasonal,
                 initialization_method='estimated'
             )
-
+    
+            # Fit with train data
             self.fitted_model = self.model.fit(
                 smoothing_level=self.alpha,
                 smoothing_trend=self.beta,
@@ -93,12 +96,13 @@ class HoltWintersUncertainty(BasePredictorModel):
         }
 
 def create_holt_winters_model(
-    seasonal_periods: int = 60,
+    seasonal_periods: int = 1440,
 ) -> HoltWintersUncertainty:
-
+    """
+    Factory function to create Holt-Winters model
+    """
     return HoltWintersUncertainty(
         seasonal_periods=seasonal_periods,
         trend='add',
         seasonal='add',
-        uncertainty_method=uncertainty_method
     )
