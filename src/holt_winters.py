@@ -1,12 +1,11 @@
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
-from .basemodel import BasePredictorModel
 from typing import Dict, Any, List, Optional
 import numpy as np
 import logging
 
 logger = logging.getLogger(__name__)
 
-class HoltWintersUncertainty(BasePredictorModel):
+class HoltWintersUncertainty():
 
     def __init__(
         self,
@@ -56,15 +55,18 @@ class HoltWintersUncertainty(BasePredictorModel):
             )
 
             parameters = self.fitted_model.params
-            logger.info(
-                f"Holt-Winters fitted: α={parameters['smoothing_level']:.3f}, β={parameters['smoothing_trend']:.3f}, γ={parameters['smoothing_seasonal']:.3f}"
-            )
+            logger.info(f"Holt-Winters fitted: α={parameters['smoothing_level']:.3f}, β={parameters['smoothing_trend']:.3f}, γ={parameters['smoothing_seasonal']:.3f}")
         except Exception as e:
             logger.error(f"An exception occurred while training Holt-Winters model: {e}")
             raise
     
+    def is_fitted(self) -> bool:
+        """Utility function to check if model is trained and retunrs a boolean value"""
+        return self.fitted_model is not None
+    
     def predict(self, steps: int = 1) -> Dict[str, Any]:
 
+        # Validate model is trained before predictions
         if not self.is_fitted():
             raise ValueError("Please fit model using the fit() method first")
         
@@ -72,25 +74,25 @@ class HoltWintersUncertainty(BasePredictorModel):
         forecast = self.fitted_model.forecast(steps=steps)
         mean_pred = float(forecast[0] if steps == 1 else forecast[-1])
         
-        # Get prediction intervals (95% confidence)
+        # Get prediction intervals at 95% confidence
         pred_obj = self.fitted_model.get_prediction(
             start=len(self.data),
             end=len(self.data) + steps - 1
         )
-        pred_summary = pred_obj.summary_frame(alpha=0.05)
+        prediction_summary = pred_obj.summary_frame(alpha=0.05)
         
-        lower = float(pred_summary['mean_ci_lower'].values[-1])
-        upper = float(pred_summary['mean_ci_upper'].values[-1])
+        lower_bound = float(prediction_summary['mean_ci_lower'].values[-1])
+        upper_bound = float(prediction_summary['mean_ci_upper'].values[-1])
         
         # Calculate std from confidence interval
         # For 95% CI: upper = mean + 1.96*std, lower = mean - 1.96*std
-        std = (upper - lower) / (2 * 1.96)
+        std = (upper_bound - lower_bound) / (2 * 1.96)
         
         return {
             'mean': mean_pred,
             'std': std,
-            'lower_bound': lower,
-            'upper_bound': upper,
+            'lower_bound': lower_bound,
+            'upper_bound': upper_bound,
             'confidence_level': 0.95
         }
 
