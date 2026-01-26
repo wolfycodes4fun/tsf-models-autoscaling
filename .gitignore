@@ -1,5 +1,10 @@
+# Datasets
 datasets/NASA_access_log_Jul95
 datasets/NASA_access_log_Aug95
+
+# Pickled models
+*.pk1
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

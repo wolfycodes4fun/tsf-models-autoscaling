@@ -15,6 +15,7 @@ class HoltWintersUncertainty():
         alpha: Optional[float] = None,
         beta: Optional[float] = None,
         gamma: Optional[float] = None,
+        max_history: int = 43200
     ):
         # Define instance variables
         self.seasonal_periods = seasonal_periods
@@ -23,6 +24,7 @@ class HoltWintersUncertainty():
         self.alpha = alpha
         self.beta = beta
         self.gamma = gamma
+        self.max_history = max_history
 
         self.model = None
         self.fitted_model = None
@@ -64,35 +66,68 @@ class HoltWintersUncertainty():
         """Utility function to check if model is trained and retunrs a boolean value"""
         return self.fitted_model is not None
     
+    def update(self, new_data: List[float]) -> None:
+        """
+        Update model with new data by refitting with frozen parameters (alpha, beta, gamma)
+        """
+        if not self.is_fitted():
+            logger.error("Model must be fitted before updating")
+            raise
+        
+        params = self.fitted_model.params
+        learned_alpha = params['smoothing_level']
+        learned_beta = params['smoothing_trend']
+        learned_gamma = params['smoothing_seasonal']
+        
+        # Update data with rolling window
+        self.data = np.concatenate([self.data, np.array(new_data)])
+
+        # Data will only be stored for a period of a month at maximum
+        if len(self.data) > self.max_history:
+            self.data = self.data[-self.max_history:]
+        
+        # Refit with frozen parameters
+        self.model = ExponentialSmoothing(
+            self.data,
+            seasonal_periods=self.seasonal_periods,
+            trend=self.trend,
+            seasonal=self.seasonal,
+            initialization_method='estimated'
+        )
+        
+        self.fitted_model = self.model.fit(
+            smoothing_level=learned_alpha,
+            smoothing_trend=learned_beta,
+            smoothing_seasonal=learned_gamma,
+            optimized=False
+        )
+    
     def predict(self, steps: int = 1) -> Dict[str, Any]:
 
         # Validate model is trained before predictions
         if not self.is_fitted():
-            raise ValueError("Please fit model using the fit() method first")
+            logger.error("Please fit model using the fit() method first")
+            raise
         
         # Get forecast
         forecast = self.fitted_model.forecast(steps=steps)
         mean_pred = float(forecast[0] if steps == 1 else forecast[-1])
         
-        # Get prediction intervals at 95% confidence
-        pred_obj = self.fitted_model.get_prediction(
-            start=len(self.data),
-            end=len(self.data) + steps - 1
-        )
-        prediction_summary = pred_obj.summary_frame(alpha=0.05)
-        
-        lower_bound = float(prediction_summary['mean_ci_lower'].values[-1])
-        upper_bound = float(prediction_summary['mean_ci_upper'].values[-1])
-        
-        # Calculate std from confidence interval
-        # For 95% CI: upper = mean + 1.96*std, lower = mean - 1.96*std
-        std = (upper_bound - lower_bound) / (2 * 1.96)
+        # Get residuals (actual_requests - predicted_requests)
+        residuals = self.fitted_model.resid
+
+        # Get standard deviation of residuals for prediction intervals
+        residual_std = np.std(residuals)
+        z_score = 1.96
+        std = residual_std
+        lower_bound = mean_pred - z_score * std
+        upper_bound = mean_pred + z_score * std
         
         return {
             'mean': mean_pred,
-            'std': std,
-            'lower_bound': lower_bound,
-            'upper_bound': upper_bound,
+            'std': float(std),
+            'lower_bound': float(lower_bound),
+            'upper_bound': float(upper_bound),
             'confidence_level': 0.95
         }
 
