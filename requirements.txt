@@ -1,2 +1,4 @@
 pandas
 numpy
+grpcio
+grpcio-tools
