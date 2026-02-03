@@ -1,4 +1,2 @@
 pandas
 numpy
-flask
-prometheus-flask-exporter
