@@ -28,10 +28,34 @@ kind: Service
 metadata:
   name: demo-flask-app-for-autoscaling-service
   namespace: python-demo-app
+  labels:
+    app: flask-app-service
 spec:
   selector:
     app: flask-app
   ports:
   - port: 80
     targetPort: 8080
+    name: http
+    protocol: TCP
   type: LoadBalancer
+
+---
+# ServiceMonitor for Prometheus to scrape metrics from the application
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: demo-flask-app-for-autoscaling-monitor
+  namespace: python-demo-app
+  labels:
+    app: flask-app
+    release: prometheus-stack
+spec:
+  selector:
+    matchLabels:
+      app: flask-app-service
+  endpoints:
+  - port: http
+    interval: 30s
+    path: /metrics
+    scheme: http
