@@ -28,6 +28,8 @@ kind: Service
 metadata:
   name: demo-flask-app-for-autoscaling-service
   namespace: python-demo-app
+  labels:
+    app: flask-app-service
 spec:
   selector:
     app: flask-app
@@ -51,7 +53,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: flask-app
+      app: flask-app-service
   endpoints:
   - port: http
     interval: 30s
