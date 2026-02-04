@@ -26,10 +26,9 @@ class UncertaintyAwareScaler:
     def conservative_adjustment(self, mean: float, std: float, upper_bound: float) -> float:
         return min(upper_bound, mean + 3 * std)
 
-    def calculate_replicas(self, prediction: Dict[str, Any], current_replicas: int) -> Dict[str, Any]:
+    def calculate_replicas(self, prediction: Dict[str, Any]) -> Dict[str, Any]:
         predicted_requests = prediction['mean']
         uncertainty = prediction['std']
-        req_lower_bound = prediction['lower_bound']
         req_upper_bound = prediction['upper_bound']
 
         # Conservative adjustment when uncertainty is high
@@ -37,39 +36,25 @@ class UncertaintyAwareScaler:
             adjusted_prediction = self.conservative_adjustment(predicted_requests, uncertainty, req_upper_bound)
             logger.info(f"High uncertainty: {uncertainty:.1f}")
         
+        # Scale based on predicted requests
+        elif self.risk_tolerance == 0.5:
+            adjusted_prediction = predicted_requests
+        
         # Avoid SLA violations by scaling aggressively
         elif self.risk_tolerance < 0.3:
             adjusted_prediction = predicted_requests + 2 * uncertainty
         
-        
         # Scale by minimizing chance of over-provisioning
         elif self.risk_tolerance > 0.7:
             adjusted_prediction = predicted_requests
-        
-        # Balanced mode with moderate overprovisioning
-        else:
-            adjusted_prediction = predicted_requests + uncertainty
-        
+              
         adjusted_prediction = max(0, adjusted_prediction)
         target_replicas = int(np.ceil(adjusted_prediction / self.pod_capacity))
         target_replicas = max(self.min_replicas, min(self.max_replicas, target_replicas))
 
-        replica_change = 0
-        action = "NO CHANGE"
-        if target_replicas > current_replicas:
-            replica_change = target_replicas - current_replicas
-            action = "SCALE UP"
-        elif target_replicas < current_replicas:
-            replica_change = current_replicas - target_replicas
-            action = "SCALE DOWN"
-
         logger.info(
-            f"Scaling decision: {action}"
-            f"(Current replicas: {current_replicas} -> Target replicas:{target_replicas})"
+            f"Calculated target replicas: {target_replicas}"
+            f"(predicted: {predicted_requests}, prediction_uncertaity:{uncertainty})"
         )
 
-        return {
-            'target_replicas': target_replicas,
-            'current_replicas': current_replicas,
-            'replica_change': replica_change,
-        }
+        return target_replicas

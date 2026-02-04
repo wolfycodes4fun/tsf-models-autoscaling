@@ -9,7 +9,7 @@ class HoltWintersUncertainty():
 
     def __init__(
         self,
-        seasonal_periods: int = 60,
+        seasonal_periods: int,
         trend: str = 'add',
         seasonal: str = 'add',
         alpha: Optional[float] = None,
@@ -30,13 +30,14 @@ class HoltWintersUncertainty():
         self.fitted_model = None
         self.data = None
     
-    def fit(self, data: List[float], timestamps: Optional[List[Any]] = None): 
+    def fit(self, data: List[float]): 
         self.data = np.array(data)
 
         # Validate if enough data is present for two seasonal periods
         required_data_points = 2 * self.seasonal_periods
         if len(self.data) < required_data_points:
-            raise ValueError(f"Holt-Winters model requires at least {required_data_points} for two seasonal periods but only got {len(self.data)}")
+            logger.error(f"Holt-Winters model requires at least {required_data_points} for two seasonal periods but only got {len(self.data)}")
+            raise
         
         try:
             # Create model
@@ -137,8 +138,4 @@ def create_holt_winters_model(
     """
     Factory function to create Holt-Winters model
     """
-    return HoltWintersUncertainty(
-        seasonal_periods=seasonal_periods,
-        trend='add',
-        seasonal='add',
-    )
+    return HoltWintersUncertainty(seasonal_periods=seasonal_periods)

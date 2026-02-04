@@ -16,15 +16,16 @@ class PrometheusClient:
                 timeout=timeout,
                 disable_ssl=True
             )
+            # Initialize default number of requests to 0
+            num_of_requests = 0.0
 
             logger.debug(f"Executing query: {query}")
             response = prometheus.custom_query(query=query)
             if response and len(response) > 0:
                 num_of_requests = float(response[0]['value'][1])
                 logger.info(f"Prometheus query returned: {num_of_requests}")
-                return num_of_requests
+            return num_of_requests
 
         except Exception as e:
             logger.error(f"Error fetching metrics from Prometheus: {e}")
             return 0.0
-    
