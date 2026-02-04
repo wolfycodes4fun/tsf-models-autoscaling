@@ -1,2 +1,5 @@
 pandas
 numpy
+prometheus-api-client
+grpcio
+grpcio-tools
