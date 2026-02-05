@@ -19,6 +19,7 @@ spec:
   triggers:
   - type: external
     metadata:
+      scalerAddress: uhw-autoscaler-service.keda.svc.cluster.local:50051
       query: sum(rate(flask_http_request_total{job="demo-flask-app-for-autoscaling-service"}[1m])) * 60
       podCapacity: "1000"
       minReplicas: "1"

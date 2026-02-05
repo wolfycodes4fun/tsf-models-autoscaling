@@ -10,6 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/scalers/ ./src/scalers/
 COPY src/utils/ ./src/utils/
 COPY src/config.py ./src/
+COPY src/holt_winters.py ./src/
 COPY models/ ./models/
 
 EXPOSE 50051

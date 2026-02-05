@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: uhw-autoscaler
-        image: wolfycodes4fun/tsf-autoscaler:v3
+        image: wolfycodes4fun/tsf-autoscaler:v5
+        imagePullPolicy: Always
         ports:
         - containerPort: 50051
           name: grpc
@@ -31,9 +32,6 @@ spec:
           requests:
             memory: "256Mi"
             cpu: "100m"
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
 
 ---
 apiVersion: v1

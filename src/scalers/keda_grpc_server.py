@@ -63,24 +63,41 @@ class ExternalScalerServicer(externalscaler_pb2_grpc.ExternalScalerServicer):
             query = metadata.get("query")
             pod_capacity = float(metadata.get("podCapacity", "1000"))
             activation_value = float(metadata.get("activationValue", "10"))
+            
+            logger.debug(f"GetMetrics called with query: {query}")
 
             # Fetch metrics from Prometheus
             current_requests = self.prom_client.fetch_metrics(query=query)
+            logger.debug(f"Current requests from Prometheus: {current_requests}")
 
             # Add to history
             self.history.append(current_requests)
             if len(self.history) > self.max_history_size:
                 self.history = self.history[-self.max_history_size:]
+            
+            logger.debug(f"History size: {len(self.history)}/{self.max_history_size}")
 
             # Avoid scaling when requests numbers are below activation value
             if current_requests < activation_value:
-                prediction = current_requests
+                prediction = {
+                    'mean': current_requests,
+                    'std': 0.0,
+                    'lower_bound': current_requests,
+                    'upper_bound': current_requests,
+                    'confidence_level': 0.95
+                }
+                logger.info(f"Traffic ({current_requests:.1f}) below activation ({activation_value}); scaling based on current requests")
+                logger.debug(f"Using current requests as prediction: {prediction}")
             else:
+                logger.debug(f"Updating model with current_requests: {current_requests}")
                 self.model.update([current_requests]) 
                 prediction = self.model.predict(steps=1)
+                logger.info(f"Prediction: {prediction['mean']:.1f}, uncertainty: {prediction['std']:.1f}; scaling based on predictions by model")
+                logger.debug(f"Full prediction: {prediction}")
             
             target_replicas = self.scaler.calculate_replicas(prediction)
-            logger.info(f"Prediction: {prediction['mean']:.1f}, Target: {target_replicas} replicas")
+            logger.info(f"Target replicas: {target_replicas}")
+            logger.debug(f"Returning metric value: {int(target_replicas)}")
             
             return externalscaler_pb2.GetMetricsResponse(
                 metricValues=[
@@ -106,13 +123,14 @@ class ExternalScalerServicer(externalscaler_pb2_grpc.ExternalScalerServicer):
 def serve():
     
     # Configure logging
+    log_level = getattr(logging, Config.LOG_LEVEL.upper(), logging.INFO)
     logging.basicConfig(
-        level=logging.INFO,
+        level=log_level,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     )
     logger = logging.getLogger(__name__)
     
-    logger.info("Starting gRPC server...")
+    logger.info(f"Starting gRPC server with log level: {Config.LOG_LEVEL.upper()}...")
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     externalscaler_pb2_grpc.add_ExternalScalerServicer_to_server(ExternalScalerServicer(), server)
     server.add_insecure_port('[::]:50051')

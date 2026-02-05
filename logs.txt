@@ -1,0 +1,594 @@
+2026-02-05 15:54:07,390 - src.utils.prometheus_client - INFO - Prometheus client initialized with URL: http://prometheus-stack-kube-prom-prometheus.monitoring.svc.cluster.local:9090
+2026-02-05 15:54:07,391 - __main__ - INFO - Loading trained model...
+2026-02-05 15:54:08,256 - __main__ - INFO - Model loaded successfully
+2026-02-05 15:54:08,256 - src.scalers.scaling_logic - INFO - Scaler initialized: capacity: 500.0, risk: 0.5, 
+ min_replicas: 1, max_replicas: 20
+2026-02-05 15:54:08,258 - __main__ - INFO - Server started, listening on port 50051
+2026-02-05 15:54:38,839 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:54:38,840 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:54:38,840 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:54:38,840 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:54:53,870 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:54:53,871 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:54:53,871 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:54:53,871 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:55:08,898 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:55:08,898 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:55:08,898 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:55:08,898 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:55:20,085 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:55:20,086 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:55:20,086 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:55:20,086 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:55:23,940 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:55:23,940 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:55:23,940 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:55:23,940 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:55:38,964 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:55:38,964 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:55:38,964 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:55:38,964 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:55:53,999 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:55:53,999 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:55:53,999 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:55:53,999 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:56:09,025 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:56:09,025 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:56:09,025 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:56:09,025 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:56:20,086 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:56:20,086 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:56:20,086 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:56:20,086 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:56:24,058 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:56:24,059 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:56:24,059 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:56:24,059 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:56:39,086 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:56:39,086 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:56:39,086 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:56:39,086 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:56:54,118 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:56:54,118 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:56:54,118 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:56:54,118 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:57:09,144 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:57:09,144 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:57:09,144 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:57:09,144 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:57:20,086 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:57:20,086 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:57:20,086 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:57:20,086 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:57:24,180 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:57:24,180 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:57:24,180 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:57:24,181 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:57:39,206 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:57:39,206 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:57:39,206 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:57:39,206 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:57:54,239 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:57:54,239 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:57:54,239 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:57:54,239 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:58:09,265 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:58:09,265 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:58:09,265 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:58:09,266 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:58:20,086 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:58:20,086 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:58:20,086 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:58:20,086 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:58:24,299 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:58:24,299 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:58:24,299 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:58:24,299 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:58:39,338 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:58:39,338 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:58:39,338 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:58:39,338 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:58:54,370 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:58:54,370 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:58:54,370 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:58:54,370 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:59:09,396 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:59:09,397 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:59:09,397 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:59:09,397 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:59:20,087 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:59:20,087 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:59:20,087 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:59:20,087 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:59:24,431 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:59:24,431 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:59:24,431 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:59:24,431 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:59:39,457 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:59:39,457 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:59:39,457 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:59:39,457 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 15:59:54,495 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 15:59:54,495 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 15:59:54,496 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 15:59:54,496 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:00:09,524 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:00:09,524 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:00:09,524 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:00:09,524 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:00:20,088 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:00:20,088 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:00:20,088 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:00:20,088 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:00:24,558 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:00:24,558 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:00:24,558 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:00:24,558 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:00:39,582 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:00:39,582 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:00:39,582 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:00:39,582 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:00:54,616 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:00:54,616 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:00:54,616 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:00:54,616 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:01:09,642 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:01:09,642 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:01:09,642 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:01:09,642 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:01:20,089 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:01:20,089 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:01:20,089 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:01:20,089 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:01:24,677 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:01:24,677 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:01:24,677 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:01:24,677 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:01:39,710 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:01:39,710 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:01:39,710 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:01:39,710 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:01:54,745 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:01:54,745 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:01:54,746 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:01:54,746 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:02:09,771 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:02:09,771 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:02:09,771 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:02:09,771 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:02:20,089 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:02:20,089 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:02:20,089 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:02:20,089 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:02:24,803 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:02:24,803 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:02:24,803 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:02:24,803 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:02:39,828 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:02:39,828 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:02:39,828 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:02:39,828 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:02:54,861 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:02:54,862 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:02:54,862 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:02:54,862 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:03:09,899 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:03:09,899 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:03:09,900 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:03:09,900 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:03:20,089 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:03:20,089 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:03:20,089 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:03:20,089 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:03:24,932 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:03:24,933 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:03:24,933 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:03:24,933 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:03:39,957 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:03:39,957 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:03:39,957 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:03:39,957 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:03:54,990 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:03:54,990 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:03:54,990 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:03:54,990 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:04:10,016 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:04:10,016 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:04:10,016 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:04:10,016 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:04:20,089 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:04:20,090 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:04:20,090 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:04:20,090 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:04:25,052 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:04:25,052 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:04:25,052 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:04:25,052 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:04:40,077 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:04:40,077 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:04:40,077 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:04:40,077 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:04:55,111 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:04:55,111 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:04:55,111 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:04:55,112 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:05:10,141 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:05:10,142 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:05:10,142 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:05:10,142 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:05:20,090 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:05:20,090 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:05:20,090 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:05:20,090 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:05:25,175 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:05:25,175 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:05:25,175 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:05:25,176 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:05:40,202 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:05:40,202 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:05:40,202 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:05:40,202 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:05:55,255 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:05:55,256 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:05:55,256 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:05:55,256 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:06:10,282 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:06:10,283 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:06:10,283 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:06:10,283 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:06:20,091 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:06:20,091 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:06:20,091 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:06:20,091 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:06:25,320 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:06:25,320 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:06:25,320 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:06:25,320 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:06:40,347 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:06:40,347 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:06:40,347 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:06:40,347 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:06:55,388 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:06:55,389 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:06:55,389 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:06:55,389 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:07:10,413 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:07:10,414 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:07:10,414 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:07:10,414 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:07:20,092 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:07:20,092 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:07:20,092 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:07:20,092 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:07:25,447 - src.utils.prometheus_client - INFO - Prometheus query returned: 28.0
+2026-02-05 16:07:26,094 - src.scalers.scaling_logic - INFO - Low uncertainty: 14.0, scaling based on prediction
+2026-02-05 16:07:26,094 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:07:26,094 - __main__ - INFO - Prediction: 43.1, Target: 1 replicas
+2026-02-05 16:07:41,129 - src.utils.prometheus_client - INFO - Prometheus query returned: 28.0
+2026-02-05 16:07:41,768 - src.scalers.scaling_logic - INFO - Low uncertainty: 14.0, scaling based on prediction
+2026-02-05 16:07:41,768 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:07:41,768 - __main__ - INFO - Prediction: 26.2, Target: 1 replicas
+2026-02-05 16:07:56,811 - src.utils.prometheus_client - INFO - Prometheus query returned: 1622.0
+2026-02-05 16:07:57,425 - src.scalers.scaling_logic - INFO - Low uncertainty: 15.9, scaling based on prediction
+2026-02-05 16:07:57,425 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:07:57,425 - __main__ - INFO - Prediction: 444.8, Target: 1 replicas
+2026-02-05 16:08:12,462 - src.utils.prometheus_client - INFO - Prometheus query returned: 1622.0
+2026-02-05 16:08:13,064 - src.scalers.scaling_logic - INFO - Low uncertainty: 16.9, scaling based on prediction
+2026-02-05 16:08:13,064 - src.scalers.scaling_logic - INFO - Calculated target replicas: 2
+2026-02-05 16:08:13,065 - __main__ - INFO - Prediction: 765.5, Target: 2 replicas
+2026-02-05 16:08:20,093 - src.utils.prometheus_client - INFO - Prometheus query returned: 1622.0
+2026-02-05 16:08:20,703 - src.scalers.scaling_logic - INFO - Low uncertainty: 17.4, scaling based on prediction
+2026-02-05 16:08:20,703 - src.scalers.scaling_logic - INFO - Calculated target replicas: 3
+2026-02-05 16:08:20,703 - __main__ - INFO - Prediction: 1001.7, Target: 3 replicas
+2026-02-05 16:08:27,755 - src.utils.prometheus_client - INFO - Prometheus query returned: 3158.0
+2026-02-05 16:08:28,365 - src.scalers.scaling_logic - INFO - Low uncertainty: 20.3, scaling based on prediction
+2026-02-05 16:08:28,365 - src.scalers.scaling_logic - INFO - Calculated target replicas: 4
+2026-02-05 16:08:28,365 - __main__ - INFO - Prediction: 1587.2, Target: 4 replicas
+2026-02-05 16:08:42,779 - src.utils.prometheus_client - INFO - Prometheus query returned: 3158.0
+2026-02-05 16:08:43,383 - src.scalers.scaling_logic - INFO - Low uncertainty: 21.6, scaling based on prediction
+2026-02-05 16:08:43,384 - src.scalers.scaling_logic - INFO - Calculated target replicas: 5
+2026-02-05 16:08:43,384 - __main__ - INFO - Prediction: 2023.3, Target: 5 replicas
+2026-02-05 16:08:58,433 - src.utils.prometheus_client - INFO - Prometheus query returned: 1752.0
+2026-02-05 16:08:59,047 - src.scalers.scaling_logic - INFO - Low uncertainty: 21.7, scaling based on prediction
+2026-02-05 16:08:59,047 - src.scalers.scaling_logic - INFO - Calculated target replicas: 4
+2026-02-05 16:08:59,047 - __main__ - INFO - Prediction: 1988.6, Target: 4 replicas
+2026-02-05 16:09:14,088 - src.utils.prometheus_client - INFO - Prometheus query returned: 3150.0
+2026-02-05 16:09:14,696 - src.scalers.scaling_logic - INFO - Low uncertainty: 22.4, scaling based on prediction
+2026-02-05 16:09:14,696 - src.scalers.scaling_logic - INFO - Calculated target replicas: 5
+2026-02-05 16:09:14,696 - __main__ - INFO - Prediction: 2326.8, Target: 5 replicas
+2026-02-05 16:09:20,093 - src.utils.prometheus_client - INFO - Prometheus query returned: 3150.0
+2026-02-05 16:09:20,713 - src.scalers.scaling_logic - INFO - Low uncertainty: 22.7, scaling based on prediction
+2026-02-05 16:09:20,713 - src.scalers.scaling_logic - INFO - Calculated target replicas: 6
+2026-02-05 16:09:20,713 - __main__ - INFO - Prediction: 2578.0, Target: 6 replicas
+2026-02-05 16:09:29,730 - src.utils.prometheus_client - INFO - Prometheus query returned: 4075.1205333333332
+2026-02-05 16:09:30,348 - src.scalers.scaling_logic - INFO - Low uncertainty: 23.8, scaling based on prediction
+2026-02-05 16:09:30,348 - src.scalers.scaling_logic - INFO - Calculated target replicas: 7
+2026-02-05 16:09:30,348 - __main__ - INFO - Prediction: 3015.7, Target: 7 replicas
+2026-02-05 16:09:45,399 - src.utils.prometheus_client - INFO - Prometheus query returned: 6759.495
+2026-02-05 16:09:46,056 - src.scalers.scaling_logic - INFO - Low uncertainty: 29.9, scaling based on prediction
+2026-02-05 16:09:46,056 - src.scalers.scaling_logic - INFO - Calculated target replicas: 9
+2026-02-05 16:09:46,056 - __main__ - INFO - Prediction: 4051.6, Target: 9 replicas
+2026-02-05 16:10:01,098 - src.utils.prometheus_client - INFO - Prometheus query returned: 6230.0
+2026-02-05 16:10:01,842 - src.scalers.scaling_logic - INFO - Low uncertainty: 31.7, scaling based on prediction
+2026-02-05 16:10:01,842 - src.scalers.scaling_logic - INFO - Calculated target replicas: 10
+2026-02-05 16:10:01,842 - __main__ - INFO - Prediction: 4692.5, Target: 10 replicas
+2026-02-05 16:10:16,892 - src.utils.prometheus_client - INFO - Prometheus query returned: 4724.693333333333
+2026-02-05 16:10:17,498 - src.scalers.scaling_logic - INFO - Low uncertainty: 31.7, scaling based on prediction
+2026-02-05 16:10:17,498 - src.scalers.scaling_logic - INFO - Calculated target replicas: 10
+2026-02-05 16:10:17,498 - __main__ - INFO - Prediction: 4774.6, Target: 10 replicas
+2026-02-05 16:10:20,094 - src.utils.prometheus_client - INFO - Prometheus query returned: 4754.578666666667
+2026-02-05 16:10:20,694 - src.scalers.scaling_logic - INFO - Low uncertainty: 31.7, scaling based on prediction
+2026-02-05 16:10:20,694 - src.scalers.scaling_logic - INFO - Calculated target replicas: 10
+2026-02-05 16:10:20,694 - __main__ - INFO - Prediction: 4852.5, Target: 10 replicas
+2026-02-05 16:10:32,531 - src.utils.prometheus_client - INFO - Prometheus query returned: 3102.0
+2026-02-05 16:10:33,198 - src.scalers.scaling_logic - INFO - Low uncertainty: 32.8, scaling based on prediction
+2026-02-05 16:10:33,198 - src.scalers.scaling_logic - INFO - Calculated target replicas: 9
+2026-02-05 16:10:33,198 - __main__ - INFO - Prediction: 4473.4, Target: 9 replicas
+2026-02-05 16:10:48,241 - src.utils.prometheus_client - INFO - Prometheus query returned: 518.0
+2026-02-05 16:10:48,846 - src.scalers.scaling_logic - INFO - Low uncertainty: 37.9, scaling based on prediction
+2026-02-05 16:10:48,846 - src.scalers.scaling_logic - INFO - Calculated target replicas: 8
+2026-02-05 16:10:48,846 - __main__ - INFO - Prediction: 3507.3, Target: 8 replicas
+2026-02-05 16:11:03,885 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:11:03,886 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:11:03,886 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:11:03,886 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:11:18,926 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:11:18,926 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:11:18,926 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:11:18,926 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:11:20,095 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:11:20,095 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:11:20,095 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:11:20,095 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:11:33,952 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:11:33,953 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:11:33,953 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:11:33,953 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:11:48,986 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:11:48,986 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:11:48,986 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:11:48,986 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:12:04,012 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:12:04,012 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:12:04,012 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:12:04,012 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:12:19,047 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:12:19,047 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:12:19,047 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:12:19,047 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:12:20,096 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:12:20,096 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:12:20,096 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:12:20,096 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:12:34,072 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:12:34,072 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:12:34,072 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:12:34,072 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:12:49,104 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:12:49,104 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:12:49,104 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:12:49,104 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:13:04,129 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:13:04,129 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:13:04,129 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:13:04,130 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:13:19,166 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:13:19,166 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:13:19,166 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:13:19,167 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:13:20,096 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:13:20,096 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:13:20,096 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:13:20,096 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:13:34,190 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:13:34,190 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:13:34,190 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:13:34,190 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:13:49,223 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:13:49,223 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:13:49,223 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:13:49,224 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:14:04,250 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:14:04,250 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:14:04,250 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:14:04,250 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:14:19,282 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:14:19,282 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:14:19,282 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:14:19,282 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:14:20,096 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:14:20,096 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:14:20,096 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:14:20,096 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:14:34,320 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:14:34,320 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:14:34,320 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:14:34,320 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:14:49,352 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:14:49,352 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:14:49,352 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:14:49,352 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:15:04,378 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:15:04,378 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:15:04,378 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:15:04,378 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:15:19,410 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:15:19,410 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:15:19,410 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:15:19,410 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:15:20,096 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:15:20,096 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:15:20,096 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:15:20,096 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:15:34,435 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:15:34,435 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:15:34,435 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:15:34,435 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:15:49,482 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:15:49,483 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:15:49,483 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:15:49,483 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:16:04,528 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:16:04,528 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:16:04,528 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:16:04,528 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:16:19,584 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:16:19,584 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:16:19,584 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:16:19,584 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:16:20,102 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:16:20,102 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:16:20,102 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:16:20,102 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:16:34,615 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:16:34,615 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:16:34,615 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:16:34,615 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:16:49,676 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:16:49,676 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:16:49,676 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:16:49,677 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:17:04,703 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:17:04,703 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:17:04,703 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:17:04,703 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:17:19,737 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:17:19,737 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:17:19,737 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:17:19,737 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:17:20,096 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:17:20,097 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:17:20,097 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:17:20,097 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:17:34,762 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:17:34,762 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:17:34,762 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:17:34,762 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:17:49,801 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:17:49,801 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:17:49,801 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:17:49,801 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:18:04,827 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:18:04,827 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:18:04,827 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:18:04,827 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:18:19,861 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:18:19,862 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:18:19,862 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:18:19,862 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:18:20,097 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:18:20,097 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:18:20,097 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:18:20,097 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:18:34,887 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:18:34,887 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:18:34,887 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:18:34,887 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:18:49,922 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:18:49,922 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:18:49,922 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:18:49,922 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:19:04,956 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:19:04,956 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:19:04,956 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:19:04,956 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:19:19,992 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:19:19,992 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:19:19,992 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:19:19,992 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:19:20,097 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:19:20,097 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:19:20,097 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:19:20,097 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:19:35,017 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:19:35,018 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:19:35,018 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:19:35,018 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:19:50,051 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:19:50,051 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:19:50,051 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:19:50,051 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:20:05,078 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:20:05,079 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:20:05,079 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:20:05,079 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:20:20,098 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:20:20,098 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:20:20,099 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:20:20,099 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:20:20,110 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:20:20,110 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:20:20,110 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:20:20,111 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:20:35,134 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:20:35,134 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:20:35,134 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:20:35,134 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:20:50,171 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:20:50,171 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:20:50,171 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:20:50,171 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:21:05,200 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:21:05,200 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:21:05,200 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:21:05,200 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:21:20,098 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:21:20,099 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:21:20,099 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:21:20,099 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:21:20,235 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:21:20,235 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:21:20,235 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:21:20,235 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:21:35,260 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:21:35,260 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:21:35,260 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:21:35,260 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:21:50,294 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:21:50,294 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:21:50,294 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:21:50,294 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:22:05,319 - src.utils.prometheus_client - INFO - Prometheus query returned: 2.0
+2026-02-05 16:22:05,319 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:22:05,320 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:22:05,320 - __main__ - INFO - Prediction: 2.0, Target: 1 replicas
+2026-02-05 16:22:20,099 - src.utils.prometheus_client - INFO - Prometheus query returned: 2.0
+2026-02-05 16:22:20,099 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:22:20,100 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:22:20,100 - __main__ - INFO - Prediction: 2.0, Target: 1 replicas
+2026-02-05 16:22:20,352 - src.utils.prometheus_client - INFO - Prometheus query returned: 2.0
+2026-02-05 16:22:20,352 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:22:20,352 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:22:20,352 - __main__ - INFO - Prediction: 2.0, Target: 1 replicas
+2026-02-05 16:22:35,377 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:22:35,378 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:22:35,378 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:22:35,378 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:22:50,412 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:22:50,412 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:22:50,412 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:22:50,412 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:23:05,438 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:23:05,439 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:23:05,439 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:23:05,439 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:23:20,100 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:23:20,100 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:23:20,101 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:23:20,101 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:23:20,471 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:23:20,471 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:23:20,471 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:23:20,471 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:23:35,497 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:23:35,497 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:23:35,497 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:23:35,497 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:23:50,531 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:23:50,531 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:23:50,531 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:23:50,531 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
+2026-02-05 16:24:05,557 - src.utils.prometheus_client - INFO - Prometheus query returned: 0.0
+2026-02-05 16:24:05,558 - src.scalers.scaling_logic - INFO - Low uncertainty: 0.0, scaling based on prediction
+2026-02-05 16:24:05,558 - src.scalers.scaling_logic - INFO - Calculated target replicas: 1
+2026-02-05 16:24:05,558 - __main__ - INFO - Prediction: 0.0, Target: 1 replicas
