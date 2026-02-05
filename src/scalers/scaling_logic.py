@@ -8,11 +8,11 @@ class UncertaintyAwareScaler:
     
     def __init__(
         self, 
-        pod_capacity: float = 100.0,
-        min_replicas: int = 1,
-        max_replicas: int = 10,
-        uncertainty_threshold: float = 100.0,
-        risk_tolerance: float = 0.5
+        pod_capacity: float,
+        min_replicas: int,
+        max_replicas: int,
+        uncertainty_threshold: float,
+        risk_tolerance: float
     ):
 
         self.pod_capacity = pod_capacity
@@ -22,9 +22,6 @@ class UncertaintyAwareScaler:
         self.risk_tolerance = risk_tolerance
 
         logger.info(f"Scaler initialized: capacity: {pod_capacity}, risk: {risk_tolerance}, \n min_replicas: {min_replicas}, max_replicas: {max_replicas}")
-    
-    def conservative_adjustment(self, mean: float, std: float, upper_bound: float) -> float:
-        return min(upper_bound, mean + 3 * std)
 
     def calculate_replicas(self, prediction: Dict[str, Any]) -> Dict[str, Any]:
         predicted_requests = prediction['mean']
@@ -32,29 +29,27 @@ class UncertaintyAwareScaler:
         req_upper_bound = prediction['upper_bound']
 
         # Conservative adjustment when uncertainty is high
-        if uncertainty > self.uncertainty_threshold:
-            adjusted_prediction = self.conservative_adjustment(predicted_requests, uncertainty, req_upper_bound)
-            logger.info(f"High uncertainty: {uncertainty:.1f}")
-        
-        # Scale based on predicted requests
-        elif self.risk_tolerance == 0.5:
-            adjusted_prediction = predicted_requests
-        
-        # Avoid SLA violations by scaling aggressively
-        elif self.risk_tolerance < 0.3:
-            adjusted_prediction = predicted_requests + 2 * uncertainty
-        
-        # Scale by minimizing chance of over-provisioning
-        elif self.risk_tolerance > 0.7:
-            adjusted_prediction = predicted_requests
-              
+        if uncertainty >= self.uncertainty_threshold:
+            # Safety bufferr added based on risk tolerance
+            # risk_tolerance = 0.0 = using upper bound to scale
+            # risk_tolerance = 1.0 = using prediction and a small buffer of a single standard deviation
+            safety_multiplier = 2.0 - self.risk_tolerance
+            adjusted_prediction = min(req_upper_bound,predicted_requests + safety_multiplier * uncertainty)
+            logger.info(f"High prediction uncertainty: {uncertainty:.1f}, adding safety buffer to avoid underprovisioning")
+        else:
+            if self.risk_tolerance <= 0.3:
+                # Scale based on prediction and a small buffer of half a standard deviation
+                adjusted_prediction = predicted_requests + 0.5 * uncertainty
+                logger.info(f"Low prediction uncertainty: {uncertainty:.1f}, scaling with small buffer")
+            else:
+                # Trust the prediction
+                adjusted_prediction = predicted_requests
+                logger.info(f"Low uncertainty: {uncertainty:.1f}, scaling based on prediction")
+
         adjusted_prediction = max(0, adjusted_prediction)
         target_replicas = int(np.ceil(adjusted_prediction / self.pod_capacity))
         target_replicas = max(self.min_replicas, min(self.max_replicas, target_replicas))
 
-        logger.info(
-            f"Calculated target replicas: {target_replicas}"
-            f"(predicted: {predicted_requests}, prediction_uncertaity:{uncertainty})"
-        )
+        logger.info(f"Calculated target replicas: {target_replicas}")
 
         return target_replicas
