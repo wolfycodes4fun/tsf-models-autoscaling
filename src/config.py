@@ -10,3 +10,4 @@ class Config:
     UNCERTAINTY_THRESHOLD: float = float(os.getenv('UNCERTAINTY_THRESHOLD', '100'))
     MIN_REPLICAS: int = int(os.getenv('MIN_REPLICAS', '1'))
     MAX_REPLICAS: int = int(os.getenv('MAX_REPLICAS', '20'))
+    PROMETHEUS_URL: str = os.getenv('PROMETHEUS_URL', 'http://prometheus:9090')
