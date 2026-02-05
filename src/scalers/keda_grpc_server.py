@@ -14,7 +14,6 @@ logger = logging.getLogger(__name__)
 class ExternalScalerServicer(externalscaler_pb2_grpc.ExternalScalerServicer):
 
     def __init__(self):
-        
         # Initialize Prometheus client
         self.prom_client = PrometheusClient(url=Config.PROMETHEUS_URL)
 
@@ -57,14 +56,13 @@ class ExternalScalerServicer(externalscaler_pb2_grpc.ExternalScalerServicer):
     
     def GetMetrics(self, request, context):
         try:
-            server_address = request.scaledObjectRef.scalerMetaData["serverAddress"]
             query = request.scaledObjectRef.scalerMetaData["query"]
             pod_capacity = request.scaledObjectRef.scalerMetaData["podCapacity"]
             activation_value = request.scaledObjectRef.scalerMetaData["activationValue"]
             max_history_size = request.scaledObjectRef.scalerMetaData["maxHistorySize"]
 
             # Fetch metrics from Prometheus
-            current_requests = self.prom_client.get_metric(server_address, query)
+            current_requests = self.prom_client.fetch_metrics(query=query)
 
             # Add to history
             self.history.append(current_requests)

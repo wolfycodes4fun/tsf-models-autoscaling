@@ -1,5 +1,6 @@
 pandas
 numpy
+statsmodels
 prometheus-api-client
 grpcio
 grpcio-tools

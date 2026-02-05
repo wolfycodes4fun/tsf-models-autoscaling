@@ -31,6 +31,7 @@ class HoltWintersUncertainty():
         self.data = None
     
     def fit(self, data: List[float]): 
+        """Trains model on training dataset and stores it in fitted_model attribute"""
         self.data = np.array(data)
 
         # Validate if enough data is present for two seasonal periods
@@ -59,15 +60,16 @@ class HoltWintersUncertainty():
 
             parameters = self.fitted_model.params
             logger.info(f"Holt-Winters fitted: α={parameters['smoothing_level']:.3f}, β={parameters['smoothing_trend']:.3f}, γ={parameters['smoothing_seasonal']:.3f}")
+
         except Exception as e:
             logger.error(f"An exception occurred while training Holt-Winters model: {e}")
             raise
     
     def is_fitted(self) -> bool:
-        """Utility function to check if model is trained and retunrs a boolean value"""
+        """Utility function to check if model is trained and returns a boolean value"""
         return self.fitted_model is not None
     
-    def update(self, new_data: List[float]) -> None:
+    def update(self, new_data: List[float]):
         """
         Update model with new data by refitting with frozen parameters (alpha, beta, gamma)
         """
@@ -111,16 +113,15 @@ class HoltWintersUncertainty():
             raise
         
         # Get forecast
-        forecast = self.fitted_model.forecast(steps=steps)
-        mean_pred = float(forecast[0] if steps == 1 else forecast[-1])
+        prediction = self.fitted_model.forecast(steps=steps)
+        mean_pred = float(prediction[0] if steps == 1 else prediction[-1])
         
         # Get residuals (actual_requests - predicted_requests)
         residuals = self.fitted_model.resid
 
         # Get standard deviation of residuals for prediction intervals
-        residual_std = np.std(residuals)
         z_score = 1.96
-        std = residual_std
+        std = np.std(residuals)
         lower_bound = mean_pred - z_score * std
         upper_bound = mean_pred + z_score * std
         
