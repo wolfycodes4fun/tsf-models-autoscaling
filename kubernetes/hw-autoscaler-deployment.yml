@@ -1,0 +1,49 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uhw-autoscaler
+  namespace: keda
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: uhw-autoscaler
+  template:
+    metadata:
+      labels:
+        app: uhw-autoscaler
+    spec:
+      containers:
+      - name: uhw-autoscaler
+        image: wolfycodes4fun/tsf-autoscaler:v5
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 50051
+          name: grpc
+        env:
+        - name: PROMETHEUS_URL
+          value: "http://prometheus-stack-kube-prom-prometheus.monitoring.svc.cluster.local:9090"
+        - name: SEASONAL_PERIODS
+          value: "1440"
+        - name: MAX_HISTORY_SIZE
+          value: "2880"
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: uhw-autoscaler-service
+  namespace: keda
+spec:
+  selector:
+    app: uhw-autoscaler
+  ports:
+  - port: 50051
+    targetPort: 50051
+    name: grpc
+  type: ClusterIP
