@@ -21,11 +21,12 @@ class PrometheusClient:
 
             logger.debug(f"Executing query: {query}")
             response = prometheus.custom_query(query=query)
+            logger.info(f"Prometheus query returned: {response}")
             if response and len(response) > 0:
                 num_of_requests = float(response[0]['value'][1])
-                logger.info(f"Prometheus query returned: {num_of_requests}")
+                logger.info(f"Prometheus query returned: {num_of_requests} number of requests")
             return num_of_requests
 
         except Exception as e:
             logger.error(f"Error fetching metrics from Prometheus: {e}")
-            return 0.0
+            return num_of_requests

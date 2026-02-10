@@ -4,7 +4,7 @@ import threading
 
 # Configuration
 # Use port-forward: kubectl port-forward -n python-demo-app svc/demo-flask-app-for-autoscaling-service 8080:80
-URL = "http://localhost:8080/api/hello" # Replace with your service URL
+URL = "http://20.204.246.223/api/hello" # Replace with your service URL
 TOTAL_THREADS = 50  # Increase this to scale higher
 
 def send_requests():
