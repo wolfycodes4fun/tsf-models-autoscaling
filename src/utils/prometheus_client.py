@@ -1,32 +1,31 @@
-import logging
 from prometheus_api_client import PrometheusConnect
+import logging
 
 logger = logging.getLogger(__name__)
 
 class PrometheusClient:
-
-    def __init__(self, url: str):
-        self.url = url
-        logger.info(f"Prometheus client initialized with URL: {url}")
+    """
+    Client for querying Prometheus for metrics. Wraps PrometheusConnect and exposes a single method
+    fetch_metrics which returns a float value (ex- the request count) or 0.0 if no data is returned.
+    """
+    def __init__(self, server_address: str, timeout: int = 10):
+        self.prometheus_client = PrometheusConnect(
+            url = server_address,
+            disable_ssl=True,
+            timeout=timeout
+        )
+        logger.info(f"Prometheus client initialized with URL: {server_address}")
     
-    def fetch_metrics(self, query: str, timeout: int = 10) -> float:
-        try:
-            prometheus = PrometheusConnect(
-                url=self.url,
-                timeout=timeout,
-                disable_ssl=True
-            )
-            # Initialize default number of requests to 0
-            num_of_requests = 0.0
+    def fetch_metrics(self, query: str) -> float:
+        logger.debug(f"Executing query: {query}")
+        metric_data = self.prometheus_client.custom_query(query=query)
 
-            logger.debug(f"Executing query: {query}")
-            response = prometheus.custom_query(query=query)
-            logger.info(f"Prometheus query returned: {response}")
-            if response and len(response) > 0:
-                num_of_requests = float(response[0]['value'][1])
-                logger.info(f"Prometheus query returned: {num_of_requests} number of requests")
-            return num_of_requests
+        number_of_requests = 0.0
 
-        except Exception as e:
-            logger.error(f"Error fetching metrics from Prometheus: {e}")
-            return num_of_requests
+        if metric_data:
+            number_of_requests = float(metric_data[0]['value'][1])
+            logger.info(f"Prometheus query returned {number_of_requests} number of requests")
+        else:
+            logger.warning("No data was returned from Prometheus query hence returning 0.0")
+
+        return number_of_requests

@@ -1,25 +1,28 @@
-import logging
-import pickle
-import grpc
-from concurrent import futures
-from typing import List
-from . import externalscaler_pb2
-from . import externalscaler_pb2_grpc
 from src.utils.prometheus_client import PrometheusClient
 from src.scalers.scaling_logic import UncertaintyAwareScaler
 from src.config import Config
+from . import externalscaler_pb2
+from . import externalscaler_pb2_grpc
+from concurrent import futures
+from typing import List
+import pickle
+import grpc
+import logging
 
+
+# Configure logging
 logger = logging.getLogger(__name__)
 
+# gRPC server implementation for KEDA
 class ExternalScalerServicer(externalscaler_pb2_grpc.ExternalScalerServicer):
 
     def __init__(self):
         # Initialize Prometheus client
-        self.prom_client = PrometheusClient(url=Config.PROMETHEUS_URL)
+        self.prom_client = PrometheusClient(server_address=Config.PROMETHEUS_URL)
 
         # Load trained model
         logger.info("Loading trained model...")
-        try:
+        try: 
             with open('models/holt_winters_uncertainty.pkl', 'rb') as f:
                 self.model = pickle.load(f)
             logger.info("Model loaded successfully")
